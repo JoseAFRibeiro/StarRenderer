@@ -1,0 +1,9 @@
+{
+    "C_Cpp.default.compileCommands": "build\\compile_commands.json",
+    "mesonbuild.configureOnOpen": true,
+    "files.associations": {
+        "stdio.h": "c",
+        "stdint-gcc.h": "c",
+        "segl.h": "c"
+    }
+}
