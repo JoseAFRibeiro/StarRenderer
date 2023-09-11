@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": " ${workspaceFolder}/bin/star.exe",
+            "program": " ${workspaceFolder}/build/star.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

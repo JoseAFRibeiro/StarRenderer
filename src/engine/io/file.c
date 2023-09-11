@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+
 uint8_t* readfile(const char *path)
 {
-    off_t fSize;
+    int fSize;
     uint8_t *buffer;
     uint_least8_t result;
     size_t readResult;

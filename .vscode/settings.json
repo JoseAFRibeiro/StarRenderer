@@ -4,6 +4,7 @@
     "files.associations": {
         "stdio.h": "c",
         "stdint-gcc.h": "c",
-        "segl.h": "c"
+        "segl.h": "c",
+        "vec3-ext.h": "c"
     }
 }

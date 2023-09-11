@@ -6,7 +6,7 @@
 
 GLuint linkShaderProgram(GLint frag, GLint vert)
 {   
-    char *errorString[2048];
+    char errorString[2048];
     GLsizei len = 0;
     GLuint program = 0;
     GLuint success = 0;
@@ -23,7 +23,7 @@ GLuint linkShaderProgram(GLint frag, GLint vert)
 
     if(success == GL_FALSE)
     {
-        glGetProgramInfoLog(program, 2048, &len, errorString);
+        glGetProgramInfoLog(program, 2048, &len, &errorString);
         printf("Error linking: %s\n", errorString);
         glDeleteShader(frag);
         glDeleteShader(vert);
@@ -93,7 +93,10 @@ GLFWwindow *initGL(void)
 
     glfwMakeContextCurrent(win);
     glfwSetFramebufferSizeCallback(win, framebuffersize_callback);
-
+    glfwSetInputMode(win, GLFW_CURSOR, GLFW_CURSOR_DISABLED);  
+    glfwSetCursorPosCallback(win, mouse_callback);
+    glfwSetKeyCallback(win, keypressed_callback);
+    
     if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         glfwTerminate();
